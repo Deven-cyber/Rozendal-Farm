@@ -214,7 +214,7 @@
 
 
 
-
+/*
 .goodtogather {
     display: flex;
     justify-content: center;
@@ -224,32 +224,32 @@
     padding: 10px;
     margin: 0px;
     /* Ensure no extra margins are added */
-    width: 100vw;
+/*   width: 100vw;
     /* Full viewport width */
-}
+/*}
 
 .g2g {
     position: relative;
     width: 100%;
     /* Full width of the container */
-    height: 100%;
+/*   height: 100%;
     /* Adjust the height to fit your design */
-    overflow: hidden;
+/*    overflow: hidden;
     /* Hide any overflowing content */
-}
+/*}
 
 .g2g img {
     width: 100%;
     /* Make the image fill the container horizontally */
-    height: 100%;
+/*   height: 100%;
     /* Ensure it stretches vertically */
-    object-fit: cover;
+/*   object-fit: cover;
     /* Maintain aspect ratio and cover the entire container */
-    object-position: center;
+/*   object-position: center;
     /* Adjust to show the desired part of the image */
-    display: block;
-    /* Removes inline spacing issues with images */
-}
+/*display: block;
+/* Removes inline spacing issues with images */
+/*}
 
 
 
@@ -257,21 +257,21 @@
 .block2 {
     position: absolute;
     /* Position the block relative to the section */
-    top: 50%;
+/*   top: 50%;
     /* Move the block to 50% vertically */
-    left: 50%;
+/*    left: 50%;
     /* Move the block to 50% horizontally */
-    transform: translate(-50%, -50%);
+/*   transform: translate(-50%, -50%);
     /* Center the block */
-    text-align: center;
+/*    text-align: center;
     background-color: rgba(255, 255, 255, 0.8);
     /* Add a semi-transparent background */
-    padding: 20px;
+/*    padding: 20px;
     border-radius: 10px;
     /* Optional: Add rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+/*    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     /* Optional: Add a shadow for better visibility */
-}
+/*}
 
 .block2 h2,
 .block2 p {
@@ -285,6 +285,78 @@
     padding: 10px 20px;
     background-color: whitesmoke;
     /* Button color */
+/*color: black;
+
+/*    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.book-button2:hover {
+    background-color: rgb(187, 184, 184);
+    /* Darker shade on hover */
+/*}
+
+
+
+
+
+
+/* General Section Styles */
+.goodtogather {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #f8f8f8;
+    padding: 10px;
+    margin: 0px;
+    width: 100vw;
+    overflow: hidden;
+    /* Prevent any content overflow */
+}
+
+.g2g {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.g2g img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.block2 {
+    position: absolute;
+    /* Center the text block on desktop view */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgba(210, 180, 140, 0.8)
+        /*rgba(255, 255, 255, 0.8)*/
+    ;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.block2 h2,
+.block2 p {
+    margin: 0;
+    padding: 10px 0;
+}
+
+.book-button2 {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: whitesmoke;
     color: black;
     text-decoration: none;
     border-radius: 5px;
@@ -293,22 +365,47 @@
 
 .book-button2:hover {
     background-color: rgb(187, 184, 184);
-    /* Darker shade on hover */
 }
 
-/*.overlay-text {
-    position: absolute;
-    bottom: 10%;
-    /* Adjust the position as needed */
-/*left: 50%;
-    transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.6);
-    /* Semi-transparent background */
-/*color: #fff;
-    /* White text */
-/*padding: 10px 20px;
-    border-radius: 5px;
-    font-style: italic;
-    font-size: 16px;
-    text-align: center;
-}*/
+/* Responsive Design */
+@media (max-width: 767px) {
+    .goodtogather {
+        flex-direction: column;
+        /* Stack the image and text */
+        padding: 0;
+    }
+
+    .g2g {
+        width: 100%;
+        height: auto;
+        /* Ensure image scales properly */
+    }
+
+    .g2g img {
+        width: 100%;
+        height: auto;
+        /* Keep aspect ratio */
+    }
+
+    .block2 {
+        position: relative;
+        /* Use relative positioning for mobile */
+        top: auto;
+        left: auto;
+        transform: none;
+        /* Remove centering */
+        margin: 20px auto;
+        /* Center the block below the image */
+        width: 90%;
+        /* Ensure it fits within the screen */
+    }
+
+    .block2 h2,
+    .block2 p {
+        padding: 10px;
+    }
+
+    .book-button2 {
+        margin-top: 10px;
+    }
+}

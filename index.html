@@ -17,6 +17,7 @@
 
 <body>
 
+    <!--
     <header>
         <nav class="menu-bar">
             <div class="logo">
@@ -38,6 +39,47 @@
             </div>
         </nav>
     </header>
+    -->
+
+    <header>
+        <nav class="menu-bar">
+            <div class="logo">
+                <img src="logo.png" alt="Rozendal Logo">
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="farmstay.html">FARM STAY</a></li>
+                <li><a href="#">BOOK NOW</a></li>
+                <li><a href="#">VINEGAR CELLAR</a></li>
+                <li><a href="#foodies">FOODIES</a></li>
+            </ul>
+            <div class="login">
+                <a href="login">Login</a>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+    </script>
+
+
+
+
+
 
     <!-- Image Slider Section -->
     <div class="slider">
@@ -102,8 +144,9 @@
                     revitalized and content. We have 8 Country Studios, 4 Family Studios, a one bedroom apartment and a
                     two
                     bedroom
-                    apartment, each with a kitchenette and private patio. <strong>Discover more...</strong>
+                    apartment, each with a kitchenette and private patio. <br><strong>Discover more...</strong>
                 </em>
+                <br>
                 <!-- Button to Booking page -->
                 <a href="https://www.booking.com/hotel/za/auberge-rozendal-winefarm.en-gb.html?aid=311984&label=auberge-rozendal-winefarm-t%2Aw7wJMD9EPyx3sSDU1ExAS459347270629%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-356785807347%3Alp1028763%3Ali%3Adec%3Adm&sid=400b0551f8b7c6e0b7070b754bf00183&dest_id=-1287082&dest_type=city&dist=0&group_adults=10&group_children=0&hapos=1&hpos=1&no_rooms=4&req_adults=10&req_children=0&room1=A%2CA&room2=A%2CA&room3=A%2CA%2CA&room4=A%2CA%2CA&sb_price_type=total&sr_order=popularity&srepoch=1737619640&srpvid=1186391b58ac0035&type=total&ucfs=1&"
                     class="book-button">> BOOK ONLINE</a>
@@ -114,8 +157,9 @@
             <h2>Vinegar Cellar</h2>
             <p><em>Our preference for taste, nature, health and patience, over preservatives, artificial additives,
                     mass production and quick fixes, rewards us with exceptional quality, local vinegars, and a couple
-                    of awards to boast about. <strong>Discover More...</strong>
+                    of awards to boast about. <br><strong>Discover More...</strong>
                 </em>
+                <br>
                 <!-- Button to Online Shop -->
                 <a href="https://www.rozendalvinegar.com/" class="shop-button">> SHOP ONLINE</a>
             </p>

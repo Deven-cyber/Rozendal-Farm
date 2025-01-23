@@ -40,15 +40,28 @@ ul {
 .footer-col {
     width: 30%;
     /* Each column takes up 25% width */
-    padding: 40px;
+    /*    padding: 40px;
     border: 2px solid rgba(255, 255, 255, 0.5);
     /* Add a semi-transparent border */
-    background-color: rgba(255, 255, 255, 0.8);
+    /*    background-color: rgba(255, 255, 255, 0.8);
     /* Transparent dark background for contrast */
+    /*    border-radius: 8px;
+    /* Optional: rounded corners */
+    /*    margin: 20px 10px;
+    /* Add space between the columns */
+    /*    text-align: center;
+    /* Center-align text */
+    /*}*/
+    background-color: rgba(210, 180, 140, 0.8);
+    /* Transparent version of #d2b48c */
+    border: 2px solid rgba(210, 180, 140, 0.5);
+    /* Adjusted border color */
     border-radius: 8px;
     /* Optional: rounded corners */
     margin: 20px 10px;
     /* Add space between the columns */
+    padding: 40px;
+    /* Padding inside the columns */
     text-align: center;
     /* Center-align text */
 }
@@ -98,9 +111,12 @@ ul {
 }
 
 .footer-col ul li a:hover {
-    background-color: rgb(187, 184, 184);
+    background-color:
+        /*rgb(187, 184, 184)*/
+        rgba(255, 255, 255, 0.8);
     /*padding-left: 8px;*/
-    color: #24262b;
+    color:
+        #24262b;
     /* Changes text color on hover */
     border-radius: 5px;
     /* Optional: Adds rounded corners for hover effect */
@@ -129,7 +145,9 @@ ul {
 
 .footer-col .social-links a:hover {
     color: #24262b;
-    background-color: rgb(187, 184, 184);
+    background-color:
+        /*rgb(187, 184, 184)*/
+        rgba(255, 255, 255, 0.8);
 }
 
 /* Responsive adjustments */
