@@ -1,0 +1,314 @@
+/* Styles for side-by-side blocks */
+/*.blocks-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+}
+
+.block {
+    flex: 1;
+    text-align: center;
+
+}
+
+.block img {
+    max-width: 100%;
+    height: 50%;
+    object-fit: cover;
+}*/
+
+/* Styles for side-by-side blocks */
+.blocks-section {
+    display: flex;
+    justify-content: space-evenly;
+    /* Evenly distribute spaces between and around blocks */
+    gap: 0;
+    /* No extra space between blocks since spaces are already managed by flex */
+    padding: 20px;
+}
+
+/* Block styling */
+.block {
+    flex: 0 0 25%;
+    /* Each block takes 25% of the container's width */
+    text-align: center;
+    margin: 0;
+    /* Remove extra margin */
+    box-sizing: border-box;
+    /* Ensures padding and borders are included in block size */
+    border: 20px solid #d2b48c;
+    /* Light brown border around each block */
+    padding: 20px;
+    /* Add padding inside the block for spacing */
+    background-color: #fff;
+    /* Optional: Add a background color for better visibility */
+}
+
+/* Block images */
+.block img {
+    width: 100%;
+    /* Make the image fill the block */
+    height: auto;
+    /* Keep the aspect ratio */
+    object-fit: cover;
+}
+
+/* Button styling */
+.book-button,
+.shop-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    color: #333;
+    /* Match button text color with the other text */
+    text-decoration: none;
+    /* Remove underline from the link */
+    border: 2px solid #333;
+    /* Match border color with text color */
+    background-color: transparent;
+    /* Keep the button background transparent */
+    font-size: 16px;
+    /* Adjust button font size */
+    font-weight: bold;
+    /* Make button text bold */
+    border-radius: 5px;
+    /* Optional: Add rounded corners */
+    transition: all 0.3s ease;
+    /* Smooth transition for hover effects */
+}
+
+/* Button hover effect */
+.book-button:hover,
+.shop-button:hover {
+    background-color: #333;
+    /* Darken button background on hover */
+    color: #fff;
+    /* Make text white when hovered */
+    cursor: pointer;
+    /* Change cursor to pointer */
+}
+
+/* Responsive layout: Stack blocks on mobile */
+@media (max-width: 768px) {
+    .blocks-section {
+        flex-direction: column;
+        /* Stack blocks vertically */
+        align-items: center;
+        /* Center blocks on smaller screens */
+    }
+
+    .block {
+        flex: none;
+        /* Reset flex properties */
+        width: 80%;
+        /* Each block takes 80% of the screen width */
+        margin-bottom: 20px;
+        /* Add spacing between stacked blocks */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Styles for the About Us video section */
+.about-video {
+    display: flex;
+    flex-direction: column;
+    /* Stack heading and video */
+    align-items: center;
+    /* Center content horizontally */
+    justify-content: center;
+    /* Center content vertically */
+    background-color: #d2b48c;
+    /* Light brown background */
+    padding: 40px;
+    /* Add some padding around the content */
+    margin: 20px auto;
+    /* Center the section on the page */
+    border-radius: 10px;
+    /* Add rounded corners for a polished look */
+    max-width: 90%;
+    /* Limit the width of the section */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Optional: Add a subtle shadow */
+}
+
+/* Style the heading */
+.about-video h2 {
+    margin-bottom: 20px;
+    color: #333;
+    /* Darker text color for better contrast */
+    font-size: 24px;
+    /* Adjust heading size */
+    text-align: center;
+}
+
+/* Style the video */
+.about-video video {
+    max-width: 100%;
+    /* Make video responsive */
+    height: auto;
+    /* Maintain aspect ratio */
+    border: 5px solid #fff;
+    /* Optional: Add a white border around the video */
+    border-radius: 10px;
+    /* Match the section's rounded corners */
+}
+
+
+
+
+
+
+
+
+.mapcolor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f8f8;
+    padding: 0;
+    margin: 0;
+    /* Ensure no extra margins are added */
+    width: 100vw;
+    /* Full viewport width */
+}
+
+.map {
+    position: relative;
+    width: 100%;
+    /* Full width of the container */
+    height: 50vh;
+    /* Adjust the height to fit your design */
+    overflow: hidden;
+    /* Hide any overflowing content */
+}
+
+.map img {
+    width: 100%;
+    /* Make the image fill the container horizontally */
+    height: 100%;
+    /* Ensure it stretches vertically */
+    object-fit: cover;
+    /* Maintain aspect ratio and cover the entire container */
+    object-position: center;
+    /* Adjust to show the desired part of the image */
+    display: block;
+    /* Removes inline spacing issues with images */
+}
+
+
+
+
+
+
+
+.goodtogather {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #f8f8f8;
+    padding: 10px;
+    margin: 0px;
+    /* Ensure no extra margins are added */
+    width: 100vw;
+    /* Full viewport width */
+}
+
+.g2g {
+    position: relative;
+    width: 100%;
+    /* Full width of the container */
+    height: 100%;
+    /* Adjust the height to fit your design */
+    overflow: hidden;
+    /* Hide any overflowing content */
+}
+
+.g2g img {
+    width: 100%;
+    /* Make the image fill the container horizontally */
+    height: 100%;
+    /* Ensure it stretches vertically */
+    object-fit: cover;
+    /* Maintain aspect ratio and cover the entire container */
+    object-position: center;
+    /* Adjust to show the desired part of the image */
+    display: block;
+    /* Removes inline spacing issues with images */
+}
+
+
+
+
+.block2 {
+    position: absolute;
+    /* Position the block relative to the section */
+    top: 50%;
+    /* Move the block to 50% vertically */
+    left: 50%;
+    /* Move the block to 50% horizontally */
+    transform: translate(-50%, -50%);
+    /* Center the block */
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Add a semi-transparent background */
+    padding: 20px;
+    border-radius: 10px;
+    /* Optional: Add rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* Optional: Add a shadow for better visibility */
+}
+
+.block2 h2,
+.block2 p {
+    margin: 0;
+    padding: 10px 0;
+}
+
+.book-button2 {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: whitesmoke;
+    /* Button color */
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.book-button2:hover {
+    background-color: rgb(187, 184, 184);
+    /* Darker shade on hover */
+}
+
+/*.overlay-text {
+    position: absolute;
+    bottom: 10%;
+    /* Adjust the position as needed */
+/*left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    /* Semi-transparent background */
+/*color: #fff;
+    /* White text */
+/*padding: 10px 20px;
+    border-radius: 5px;
+    font-style: italic;
+    font-size: 16px;
+    text-align: center;
+}*/

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="header-styles.css">
+    <link rel="stylesheet" href="footer-styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="slider.css">
+    <link rel="stylesheet" href="video.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <header>
+        <nav class="menu-bar">
+            <div class="logo">
+                <img src="logo.png" alt="Rozendal Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="farmstay.html">FARM STAY</a></li>
+                <li><a
+                        href="https://www.booking.com/hotel/za/auberge-rozendal-winefarm.en-gb.html?aid=311984&label=auberge-rozendal-winefarm-t%2Aw7wJMD9EPyx3sSDU1ExAS459347270629%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-356785807347%3Alp1028763%3Ali%3Adec%3Adm&sid=400b0551f8b7c6e0b7070b754bf00183&dest_id=-1287082&dest_type=city&dist=0&group_adults=10&group_children=0&hapos=1&hpos=1&no_rooms=4&req_adults=10&req_children=0&room1=A%2CA&room2=A%2CA&room3=A%2CA%2CA&room4=A%2CA%2CA&sb_price_type=total&sr_order=popularity&srepoch=1737619640&srpvid=1186391b58ac0035&type=total&ucfs=1&">BOOK
+                        NOW</a></li>
+                <li><a
+                        href="https://www.rozendalvinegar.com/?srsltid=AfmBOoqd-pJJX9FwQ4v74DRC_YxJ6j8cQtZ-hXXB_L_dKpJUQf5hIWXt">VINEGAR
+                        CELLAR</a></li>
+                <li><a href="#foodies">FOODIES</a></li>
+            </ul>
+            <div class="login">
+                <a href="login">Login</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Image Slider Section -->
+    <div class="slider">
+        <div class="slides">
+            <div class="slide show-text">
+                <img src="lahaina.jpg" alt="Lahaina">
+                <div class="overlay-text"><em>"Rumminating, contemplating, and watching life on the farm go by" -
+                        Lehaina</em></div>
+            </div>
+            <div class="slide">
+                <img src="nature.JPG" alt="Love Pond">
+                <div class="overlay-text"><em>Experience Tranquility</em></div>
+            </div>
+            <div class="slide">
+                <img src="shalwan.jpg" alt="shalwan">
+                <div class="overlay-text"><em>"Faster than the wind in the fresh forest air high in the mountains" -
+                        Shilwan</em></div>
+            </div>
+            <div class="slide">
+                <img src="vinegar.jpg" alt="vinegar">
+                <div class="overlay-text"><em>Indulge in a product of time</em></div>
+            </div>
+        </div>
+    </div>
+    <!-- <script>
+        // JavaScript for slider
+        let index = 0;
+        const slides = document.querySelectorAll('.slide');
+        setInterval(() => {
+            slides[index].classList.remove('show-text');
+            index = (index + 1) % slides.length;
+            slides[index].classList.add('show-text');
+        }, 3000); // Change every 3 seconds
+    </script>-->
+    <script>   let index = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        function changeSlide() {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('show-text');
+                if (i === index) {
+                    slide.classList.add('show-text');
+                }
+            });
+
+            index = (index + 1) % totalSlides; // Loop back to the first slide after the last one
+        }
+
+        // Change slide every 3 seconds
+        setInterval(changeSlide, 4000);
+    </script>
+
+
+    <!-- Side-by-Side Blocks Section -->
+    <section class="blocks-section">
+        <div class="block">
+            <img src="cottages.jpg" alt="Country Cottages">
+            <h2>Guest Farm</h2>
+            <p><em>The accommodation promises a romantic getaway, relaxing family holiday or peaceful retreat, leaving
+                    visitors
+                    revitalized and content. We have 8 Country Studios, 4 Family Studios, a one bedroom apartment and a
+                    two
+                    bedroom
+                    apartment, each with a kitchenette and private patio. <strong>Discover more...</strong>
+                </em>
+                <!-- Button to Booking page -->
+                <a href="https://www.booking.com/hotel/za/auberge-rozendal-winefarm.en-gb.html?aid=311984&label=auberge-rozendal-winefarm-t%2Aw7wJMD9EPyx3sSDU1ExAS459347270629%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-356785807347%3Alp1028763%3Ali%3Adec%3Adm&sid=400b0551f8b7c6e0b7070b754bf00183&dest_id=-1287082&dest_type=city&dist=0&group_adults=10&group_children=0&hapos=1&hpos=1&no_rooms=4&req_adults=10&req_children=0&room1=A%2CA&room2=A%2CA&room3=A%2CA%2CA&room4=A%2CA%2CA&sb_price_type=total&sr_order=popularity&srepoch=1737619640&srpvid=1186391b58ac0035&type=total&ucfs=1&"
+                    class="book-button">> BOOK ONLINE</a>
+            </p>
+        </div>
+        <div class="block">
+            <img src="vinegar2.JPG" alt="Vinegar Cellar">
+            <h2>Vinegar Cellar</h2>
+            <p><em>Our preference for taste, nature, health and patience, over preservatives, artificial additives,
+                    mass production and quick fixes, rewards us with exceptional quality, local vinegars, and a couple
+                    of awards to boast about. <strong>Discover More...</strong>
+                </em>
+                <!-- Button to Online Shop -->
+                <a href="https://www.rozendalvinegar.com/" class="shop-button">> SHOP ONLINE</a>
+            </p>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <section class="about-video">
+        <h2>About Us:</h2>
+        <div class="video-wrapper">
+            <!-- Placeholder with thumbnail -->
+            <div class="video-thumbnail" onclick="playVideo()">
+                <img src="thumbnail.JPG" alt="About Us Video Thumbnail">
+                <div class="play-button">&#9658;</div> <!-- Play button icon -->
+            </div>
+            <!-- Embedded YouTube Video -->
+            <iframe id="video-iframe" src="https://www.youtube.com/watch?v=QGk0InE0N8A" title="About Us Video"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen style="display: none;">
+            </iframe>
+        </div>
+    </section>
+
+    <script>
+        function playVideo() {
+            const iframe = document.getElementById('video-iframe');
+            const thumbnail = document.querySelector('.video-thumbnail');
+
+            // Show the iframe and hide the thumbnail
+            iframe.style.display = 'block';
+            thumbnail.style.display = 'none';
+
+            // Start playing the video
+            const videoSrc = iframe.src;
+            iframe.src = videoSrc + "?autoplay=1";
+        }
+    </script>
+
+
+
+
+
+
+
+    <section class="goodtogather">
+        <div class="g2g">
+            <img src="goodtogather2.jpg" alt="Good To Gather">
+        </div>
+        <div class="block2">
+            <h2>Good To Gather</h2>
+            <p><em>A farm-to-table restaurant set in a tree covered courtyard on Rozendal Farm.
+                    An ever-changing set menu incorporates produce from local growers and sustainable
+                    producers, including the farms botanically infused barrel aged red wine vinegars.
+                </em>
+                <br>
+                <!-- Button to Booking page -->
+                <a href="https://goodtogather.co.za/bookings" class="book-button2">> BOOK NOW</a>
+            </p>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <!--Footer-->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">Farm Stay</a></li>
+                        <li><a href="#">Vinegar Cellar</a></li>
+                        <li><a href="#">Foodies</a></li>
+                    </ul>
+                </div>
+
+
+                <!--
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="tel: +27218092600">+27 21 809 2600</a></li>
+                        <li><a href="mailto:reservations@rozendal.co.za">reservations@rozendal.co.za</a></li>
+                        <li><a href="#">Book Online</a></li>
+                        <li><a href="mailto:info@rozendal.co.za">info@rozendal.co.za</a></li>
+                    </ul>
+                </div>
+                -->
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="tel:+27218092600">+27 21 809 2600</a></li>
+                        <li id="email-link"></li>
+                        <li><a href="#">Book Online</a></li>
+                        <li id="info-email-link"></li>
+                    </ul>
+                </div>
+
+                <script>
+                    // Dynamically add email links
+                    document.getElementById('email-link').innerHTML =
+                        '<a href="mailto:' + 'reservations' + '@' + 'rozendal.co.za">reservations@rozendal.co.za</a>';
+                    document.getElementById('info-email-link').innerHTML =
+                        '<a href="mailto:' + 'info' + '@' + 'rozendal.co.za">info@rozendal.co.za</a>';
+                </script>
+
+
+
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a
+                            href="https://www.instagram.com/rozendalvinegar?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i
+                                class="
+                            fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/rozendalfarm/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </footer>
+</body>
+
+</html>
