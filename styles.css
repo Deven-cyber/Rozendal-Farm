@@ -224,7 +224,8 @@
 }
 
 .block2 {
-    font-size: large;
+    font-size: larger;
+    font-weight: 600;
     position: absolute;
     /* Center the text block on desktop view */
     top: 50%;
